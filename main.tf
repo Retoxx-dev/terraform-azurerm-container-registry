@@ -22,12 +22,12 @@ resource "azurerm_user_assigned_identity" "this" {
 # CONTAINER REGISTRY
 #################################################################
 resource "azurerm_container_registry" "this" {
-  name                = var.container_registry_name
+  name                = var.name
   resource_group_name = var.resource_group_name
   location            = var.location
-  sku                 = var.container_registry_sku
-  admin_enabled       = var.container_registry_admin_enabled
-  tags                = var.container_registry_tags
+  sku                 = var.sku
+  admin_enabled       = var.admin_enabled
+  tags                = var.tags
 
   dynamic "georeplications" {
     for_each = var.georeplications != null ? var.georeplications : []

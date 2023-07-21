@@ -13,8 +13,8 @@ module "acr" {
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
 
-  container_registry_name          = "<container-registry-name>"
-  container_registry_sku           = "Basic"
-  container_registry_admin_enabled = false
-  public_network_access_enabled    = false
+  name                          = "<container-registry-name>"
+  sku                           = "Basic"
+  admin_enabled                 = false
+  public_network_access_enabled = false
 }
